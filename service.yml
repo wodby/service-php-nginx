@@ -1,0 +1,45 @@
+name: nginx-php
+type: service
+from: nginx
+
+containers:
+- name: nginx
+  env:
+  - name: NGINX_VHOST_PRESET
+    value: php
+    
+labels:
+- nginx
+- nginx-php
+
+links:
+- name: backend
+  title: Backend
+  env:
+  - name: NGINX_BACKEND_HOST
+    value: '{{link.host}}'
+  - name: NGINX_BACKEND_PORT
+    value: '{{link.port}}'
+  selectors:
+  - type: service
+    labels:
+    - php-fpm
+    
+build:
+  dockerfile: Dockerfile
+
+volumes:
+- name: files
+  from: backend
+  title: Files
+  path: /mnt/files
+
+settings:
+- name: docroot
+  title: Nginx docroot
+  from: backend
+  var: DOCROOT_SUBDIR
+
+env:
+- name: NGINX_SERVER_ROOT
+  value: /var/www/html/$(DOCROOT_SUBDIR)
