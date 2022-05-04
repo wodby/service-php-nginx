@@ -1,4 +1,5 @@
 name: nginx-php
+title: Nginx (PHP)
 type: service
 from: nginx
 
