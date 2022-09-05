@@ -39,7 +39,6 @@ volumes:
 settings:
 - name: docroot
   title: Nginx docroot
-  from: backend
   var: DOCROOT_SUBDIR
 
 env:
