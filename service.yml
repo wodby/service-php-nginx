@@ -1,4 +1,4 @@
-name: nginx-php
+name: php-nginx
 title: Nginx (PHP)
 type: service
 from: nginx
@@ -12,7 +12,7 @@ containers:
     
 labels:
 - nginx
-- nginx-php
+- php
 
 links:
 - name: backend
