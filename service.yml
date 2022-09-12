@@ -29,6 +29,7 @@ links:
     
 build:
   dockerfile: Dockerfile
+  dockerignore: .dockerignore
 
 volumes:
 - name: files
