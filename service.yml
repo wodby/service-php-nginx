@@ -17,6 +17,7 @@ labels:
 links:
 - name: backend
   title: Backend
+  required: true
   env:
   - name: NGINX_BACKEND_HOST
     value: '{{link.host}}'
