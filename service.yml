@@ -36,6 +36,7 @@ settings:
 - name: docroot
   title: Nginx docroot
   var: DOCROOT_SUBDIR
+  default: public
 
 env:
 - name: NGINX_SERVER_ROOT
