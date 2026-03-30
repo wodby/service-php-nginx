@@ -3,12 +3,6 @@ title: Nginx (PHP)
 type: service
 from: nginx
 update: auto
-
-containers:
-- name: nginx
-  env:
-  - name: NGINX_VHOST_PRESET
-    value: php
     
 labels:
 - nginx
@@ -41,3 +35,5 @@ settings:
 env:
 - name: NGINX_SERVER_ROOT
   value: /var/www/html/$(DOCROOT_SUBDIR)
+- name: NGINX_VHOST_PRESET
+  value: php
