@@ -2,7 +2,8 @@ name: php-nginx
 title: Nginx (PHP)
 type: service
 from: nginx
-fromVersion: "^1.0.0"
+fromVersionConstraint: "^1.0.0"
+fromVersion: "1.0.0"
     
 labels:
 - nginx
