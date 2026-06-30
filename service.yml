@@ -2,7 +2,6 @@ name: php-nginx
 title: Nginx (PHP)
 type: service
 from: nginx
-update: auto
     
 labels:
 - nginx
