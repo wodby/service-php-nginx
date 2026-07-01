@@ -3,8 +3,7 @@ title: Nginx (PHP)
 type: service
 from: nginx
 fromVersionConstraint: "^1.0.0"
-fromVersion: "1.0.0"
-    
+fromVersion: "1.0.1"
 labels:
 - nginx
 - php
@@ -22,7 +21,7 @@ links:
   - type: service
     labels:
     - php-fpm
-    
+
 build:
   dockerfile: Dockerfile
   dockerignore: .dockerignore
