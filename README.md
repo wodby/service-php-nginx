@@ -19,7 +19,7 @@ configuration for Nginx (PHP).
 | --- | --- |
 | Service name | `php-nginx` |
 | Type | Application service |
-| Inherits from | [`nginx`](https://github.com/wodby/service-nginx) with version constraint `^1.0.0` |
+| Inherits from | [`nginx`](https://github.com/wodby/service-nginx) with version constraint `^2.0.0` |
 | Service links | Backend, required |
 | Application build | Dockerfile: `Dockerfile` |
 | Configuration | 1 settings |
