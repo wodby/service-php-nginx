@@ -3,7 +3,7 @@ title: Nginx (PHP)
 type: service
 from: nginx
 fromVersionConstraint: "^1.0.0"
-fromVersion: "1.0.14"
+fromVersion: "1.0.15"
 labels:
 - nginx
 - php
