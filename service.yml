@@ -38,3 +38,14 @@ env:
   value: /var/www/html/$(DOCROOT_SUBDIR)
 - name: NGINX_VHOST_PRESET
   value: php
+
+# Consumers share the source checkout's document root; uploads remain separate.
+workspace:
+  mounts:
+  - name: code
+    workload: main
+    container: nginx
+    path: '/var/www/html/{{settings.docroot}}'
+    subPath: '{{settings.docroot}}'
+    readOnly: true
+  reload: immediate
