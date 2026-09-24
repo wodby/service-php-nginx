@@ -51,3 +51,11 @@ wodby service validate-manifest service.yml --org <org-id>
 ```
 
 See the [service manifest reference](https://wodby.com/docs/2.0/services/template/) and the [managed services index](https://github.com/wodby/services).
+
+## Development workspaces
+
+This service can consume a workspace checkout through its existing `backend`
+source link. It mounts only the configured `docroot` subdirectory, read-only, at
+`/var/www/html/<docroot>`. The linked source service must prepare that directory
+before Nginx starts. Uploads retain their separate volume mounts. Both services
+must use compatible shared storage; the consumer does not clone a second copy.
